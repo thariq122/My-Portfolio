@@ -13,7 +13,7 @@ function Projects() {
         {/* Heading + subtitle via SectionHeading */}
         <SectionHeading
           title="Projects"
-          subtitle="This is some project i've been working on"
+          subtitle="This is a project that I have worked on"
         />
 
         {/*
