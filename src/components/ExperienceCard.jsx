@@ -1,12 +1,3 @@
-/**
- * ExperienceCard — from Figma spec
- *
- * Border:  3.30px white solid
- * Size:    543×301px (desktop)
- * Title:   #D8B7B7, ~24.93–27.70px, 700
- * Org:     #D8B7B7, 27.70px, 500
- * Desc:    #D8B7B7, 20px, 500, justified, letterSpacing 0.05–0.06em
- */
 function ExperienceCard({ title, organization, description }) {
   return (
     <article className="border-[3.3px] border-white bg-transparent p-5 w-full">

@@ -1,14 +1,3 @@
-/**
- * Badge — from Figma spec
- *
- * Figma:
- *   bg:           rgba(217, 217, 217, 0.20)
- *   borderRadius: 5px
- *   size:         171×24px
- *   text:         white, 20.07px / 700 / lh 21.68px / ls 0.20px
- *
- * Height is fixed at 24px to match Figma exactly.
- */
 function Badge({ label, className = '' }) {
   return (
     <span

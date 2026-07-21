@@ -1,12 +1,3 @@
-/**
- * Navbar — from Figma spec
- *
- * Background:  #1D2733 (bg-secondary)
- * Font:        Plus Jakarta Sans
- * Brand/links: #D2C6C6 (text-nav), 28.29px, 700
- * Layout:      brand left | Home | Experience | Projects | Contact Me right
- * Dividers:    thin white/30 vertical lines between items
- */
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { HiMenu, HiX } from 'react-icons/hi'

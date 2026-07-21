@@ -1,14 +1,3 @@
-/**
- * Hero — from Figma spec
- *
- * Background:  #001924 (bg-primary)
- * Heading:     white, 43.51px, 700, Plus Jakarta Sans
- * Role:        #0CB0CD, 40.73px, 700 — rotating between multiple roles
- * Body:        white, 20px, 700, justified
- * Glow blobs:  6 layered blobs (left side) — pink/cyan, yellow/red, blue/purple
- * Profile img: right col, ~397×433px
- * Social:      3 square-bordered icons, 64-68px
- */
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect } from 'react'
 import SocialIcon from './SocialIcon'

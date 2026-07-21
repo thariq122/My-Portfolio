@@ -1,13 +1,3 @@
-/**
- * Experience — from Figma spec
- *
- * Background:  #001924 (bg-primary)
- * Heading:     white, 43.51px, 700
- * Timeline:    center line, 100×100px gray (#AA9A9A) circle nodes
- * Date labels: white, 30.24px, 500
- * Cards:       543×301px, 3.3px white border
- * Alternating: left/right cards
- */
 import ExperienceCard from './ExperienceCard'
 import SectionHeading from './SectionHeading'
 import { motion } from 'framer-motion'
@@ -18,7 +8,6 @@ const entryVariant = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
 }
 
-/* Figma: 100×100 circle, #AA9A9A */
 function TimelineNode() {
   return (
     <div className="hidden md:flex flex-col items-center flex-shrink-0 w-24">
@@ -35,7 +24,6 @@ function MobileNode() {
   )
 }
 
-/* Date: white, 30.24px, 500 — desktop only, opposite side of card */
 function DateLabel({ period, align }) {
   return (
     <div className={`hidden md:flex flex-1 items-center

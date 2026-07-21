@@ -1,21 +1,3 @@
-/**
- * Footer — from Figma spec
- *
- * Background:    #272031 (bg-footer)
- * Glow:          right side, same layered blob pattern as Hero
- *
- * LEFT col:
- *   Brand:       white, 27.30px, 700
- *   Social icons: 64–68px square-bordered (LinkedIn, GitHub, Instagram)
- *   Copyright:   #D8B7B7, 18.42px, 400
- *
- * RIGHT col:
- *   Nav row:     #D8B7B7, 20.34px, 700 — "About Me." "Experience." "Projects." "Contact."
- *   Contact Me:  #D8B7B7, 26.04px, 700 (label)
- *   email/phone: #D8B7B7, 26.04px, 400
- *   Location:    #D8B7B7, 26.04px, 700 (label) / italic 400 (value)
- *   Copyright:   #D8B7B7, 18.42px, 400
- */
 import { motion } from 'framer-motion'
 import SocialIcon from './SocialIcon'
 import GlowEffect from './GlowEffect'
