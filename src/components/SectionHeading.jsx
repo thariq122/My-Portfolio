@@ -1,9 +1,3 @@
-/**
- * SectionHeading — from Figma spec
- * "// Experience" / "// Projects"
- * Color: white, 43.51px, 700, Plus Jakarta Sans
- * Subtitle: #D8B7B7, 28.90px, 700 (Projects only)
- */
 import { motion } from 'framer-motion'
 
 function SectionHeading({ title, subtitle = '', className = '' }) {

@@ -1,21 +1,3 @@
-/**
- * SocialIcon — PNG asset icon link, two display modes:
- *
- * bordered={false} (default) — Hero usage:
- *   bare PNG icon, no box, horizontal row, ~40px
- *
- * bordered={true} — Footer usage:
- *   white square border box (44×44px), icon ~24px inside,
- *   stacked vertically as shown in design/Footer.png
- *
- * Props:
- *   href      {string}  — destination URL
- *   ariaLabel {string}  — accessible label
- *   icon      {string}  — imported PNG asset path
- *   label     {string}  — img alt text
- *   size      {number}  — icon image size in px
- *   bordered  {boolean} — render white square border box (Footer style)
- */
 function SocialIcon({ href, ariaLabel, icon, label = '', size, bordered = false }) {
   /* Size defaults differ by variant */
   const imgSize = size ?? (bordered ? 22 : 40)

@@ -1,9 +1,3 @@
-/**
- * TechStack — from Figma spec
- * Background:  #1D2733 (bg-secondary), h≈123px
- * Items:       Laravel | HTML5 | PHP | Photoshop | Figma | JavaScript
- * Label style: white, 21.94px, 400
- */
 import { motion } from 'framer-motion'
 import TechStackItem from './TechStackItem'
 import skills from '../data/skills'

@@ -1,8 +1,3 @@
-/**
- * TechStackItem — from Figma spec
- * Label: white, 21.94px, 400, Plus Jakarta Sans
- * Icon:  PNG asset, various sizes (84–130px in Figma, normalised to ~48px)
- */
 import { motion } from 'framer-motion'
 import { itemVariant } from '../data/variants'
 
