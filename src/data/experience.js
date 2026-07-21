@@ -13,7 +13,7 @@ const experience = [
     side: 'right',
     title: 'Operator Staff MABIM TEKKOM 2025',
     organization: null,
-    period: 'June 2025 – August 2025',
+    period: 'Sept 2025 – Oct 2025',
     description:
       'Responsible for operating OBS Studio during the event, including managing live scenes, presentation materials, audio, and visual transitions. Collaborated with the event committee to ensure technical reliability and a smooth experience for both on-site and online participants.',
   },
