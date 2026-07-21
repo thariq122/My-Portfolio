@@ -1,9 +1,3 @@
-/**
- * Tech stack / skills data — sourced from design/Tech Stack.png
- * Order matches the screenshot (left to right):
- * Laravel, HTML5, PHP, Photoshop, Figma, JavaScript
- * icon paths are relative to src/assets/icons/
- */
 import laravelIcon from '../assets/icons/Laravel.png'
 import html5Icon from '../assets/icons/HTML5.png'
 import phpIcon from '../assets/icons/Php.png'

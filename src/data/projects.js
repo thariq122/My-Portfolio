@@ -1,7 +1,3 @@
-/**
- * Projects data — sourced from design/Projects.png
- * image paths are relative to src/assets/images/
- */
 import allCleanImg from '../assets/images/All Clean Laundry.png'
 import sistemDeteksiImg from '../assets/images/Sistem Deteksi Kantuk.png'
 
