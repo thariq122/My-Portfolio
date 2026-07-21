@@ -12,6 +12,7 @@
 
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* offset for fixed navbar height */
     font-size: 16px;
   }
 
@@ -20,6 +21,8 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
+    /* Exact background from Figma spec */
+    background-color: #001924;
   }
 
   /* Remove default list styles */

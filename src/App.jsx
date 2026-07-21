@@ -1,9 +1,27 @@
-// App.jsx — assembled in Phase 4 after all components are built
+/**
+ * App — root component.
+ * Assembles all sections in page order:
+ * Navbar → Hero → TechStack → Experience → Projects → Footer
+ */
+import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import TechStack from './components/TechStack'
+import Experience from './components/Experience'
+import Projects from './components/Projects'
+import Footer from './components/Footer'
+
 function App() {
   return (
-    <main>
-      <p style={{ color: 'white', padding: '2rem' }}>Phase 1 complete — components load here in Phase 4.</p>
-    </main>
+    <>
+      <Navbar />
+      <main>
+        <Hero />
+        <TechStack />
+        <Experience />
+        <Projects />
+      </main>
+      <Footer />
+    </>
   )
 }
 
