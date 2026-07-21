@@ -3,13 +3,14 @@
  *
  * Background:  #001924 (bg-primary)
  * Heading:     white, 43.51px, 700, Plus Jakarta Sans
- * Role:        #0CB0CD, 40.73px, 700
+ * Role:        #0CB0CD, 40.73px, 700 — rotating between multiple roles
  * Body:        white, 20px, 700, justified
  * Glow blobs:  6 layered blobs (left side) — pink/cyan, yellow/red, blue/purple
  * Profile img: right col, ~397×433px
  * Social:      3 square-bordered icons, 64-68px
  */
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
+import { useState, useEffect } from 'react'
 import SocialIcon from './SocialIcon'
 import GlowEffect from './GlowEffect'
 import social from '../data/social'
@@ -17,9 +18,15 @@ import profileImg from '../assets/images/Profile.png'
 
 const HERO_CONTENT = {
   greeting: "Hi – I'm Muhammad Thariq Akbar",
-  role: 'SOFTWARE ENGINEER',
+  roles: ['SOFTWARE ENGINEER', 'UI/UX DESIGNER', 'AI ENTHUSIAST'],
   description:
     'I am a Computer Engineering student with a strong passion for Software Development, UI/UX Design, and Artificial Intelligence. I enjoy transforming ideas into digital solutions by combining clean code, intuitive user experiences, and innovative technologies. I am always eager to learn, explore new tools, and continuously improve my skills through real-world projects and collaborative experiences.',
+}
+
+const roleVariants = {
+  enter: { opacity: 0, y: 20 },
+  center: { opacity: 1, y: 0, transition: { duration: 0.45, ease: 'easeOut' } },
+  exit:  { opacity: 0, y: -20, transition: { duration: 0.35, ease: 'easeIn' } },
 }
 
 const container = {
@@ -33,6 +40,15 @@ const fadeUp = {
 }
 
 function Hero() {
+  const [roleIndex, setRoleIndex] = useState(0)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setRoleIndex((prev) => (prev + 1) % HERO_CONTENT.roles.length)
+    }, 2500)
+    return () => clearInterval(timer)
+  }, [])
+
   return (
     <section
       id="home"
@@ -69,14 +85,25 @@ function Hero() {
             {HERO_CONTENT.greeting}
           </motion.h1>
 
-          {/* Role — #0CB0CD, 40.73px, 700 */}
-          <motion.p
+          {/* Role — #0CB0CD, 40.73px, 700 — rotates every 2.5s */}
+          <motion.div
             variants={fadeUp}
-            className="text-accent-cyan font-bold leading-[43.99px] tracking-[0.01em]
-              text-lg md:text-[36px] lg:text-[40.73px] uppercase mb-6"
+            className="overflow-hidden h-[44px] md:h-[44px] lg:h-[50px] mb-6 flex items-center"
           >
-            {HERO_CONTENT.role}
-          </motion.p>
+            <AnimatePresence mode="wait">
+              <motion.p
+                key={roleIndex}
+                variants={roleVariants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                className="text-accent-cyan font-bold leading-[43.99px] tracking-[0.01em]
+                  text-lg md:text-[36px] lg:text-[40.73px] uppercase whitespace-nowrap"
+              >
+                {HERO_CONTENT.roles[roleIndex]}
+              </motion.p>
+            </AnimatePresence>
+          </motion.div>
 
           {/* Body — white, 20px, 700, justified */}
           <motion.p
@@ -101,7 +128,7 @@ function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* ── RIGHT: profile image — 397×433 from Figma ── */}
+        {/* ── RIGHT: profile image with float animation ── */}
         <motion.div
           className="flex-shrink-0 order-first md:order-last
             flex justify-center md:justify-end
@@ -109,15 +136,17 @@ function Hero() {
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.5, ease: 'easeOut', delay: 0.2 }}
+          transition={{ duration: 0.6, ease: 'easeOut', delay: 0.2 }}
         >
-          <img
+          <motion.img
             src={profileImg}
             alt="Muhammad Thariq Akbar — profile photo"
-            className="w-48 xs:w-56 md:w-full lg:w-[397px] max-w-[397px] object-cover"
+            className="w-64 md:w-[360px] lg:w-[430px] max-w-none object-cover"
+            animate={{ y: [0, -12, 0] }}
+            transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
             loading="eager"
-            width={397}
-            height={433}
+            width={430}
+            height={470}
           />
         </motion.div>
 

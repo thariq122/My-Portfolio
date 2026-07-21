@@ -1,7 +1,3 @@
-/**
- * Social links data — sourced from design/Hero.png and design/Footer.png
- * icon: filename of the PNG asset inside src/assets/icons/
- */
 import linkedinIcon  from '../assets/icons/LinkedIn.png'
 import githubIcon    from '../assets/icons/GitHub.png'
 import instagramIcon from '../assets/icons/Instagram.png'
