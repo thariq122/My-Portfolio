@@ -130,7 +130,7 @@ function Hero() {
           <motion.img
             src={profileImg}
             alt="Muhammad Thariq Akbar — profile photo"
-            className="w-64 md:w-[360px] lg:w-[430px] max-w-none object-cover"
+            className="w-80 md:w-[450px] lg:w-[550px] max-w-none object-cover"
             animate={{ y: [0, -12, 0] }}
             transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
             loading="eager"
