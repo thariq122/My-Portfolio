@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import SocialIcon from './SocialIcon'
 import GlowEffect from './GlowEffect'
 import social from '../data/social'
-import profileImg from '../assets/images/Profile.png'
+import profileImg from '../assets/images/Profile2.png'
 
 const HERO_CONTENT = {
   greeting: "Hi – I'm Muhammad Thariq Akbar",

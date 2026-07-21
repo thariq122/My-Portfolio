@@ -1,9 +1,3 @@
-/**
- * Experience data — sourced from design/Experience.png
- * Each entry alternates left/right on the timeline.
- * side: 'left' = card on left, date on right
- * side: 'right' = date on left, card on right
- */
 const experience = [
   {
     id: 1,
