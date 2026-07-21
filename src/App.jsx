@@ -1,8 +1,3 @@
-/**
- * App — root component.
- * Assembles all sections in page order:
- * Navbar → Hero → TechStack → Experience → Projects → Footer
- */
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import TechStack from './components/TechStack'

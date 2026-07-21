@@ -10,7 +10,7 @@ const projects = [
     imageAlt: 'ALL CLEAN LAUNDRY Website screenshot',
     description:
       'Developed a laundry management website as part of a university web development project in collaboration with a local laundry business. The project aimed to digitalize the laundry service by providing customers with real-time updates on the status of their laundry orders while simplifying the management process for the business.',
-    techStack: 'Laravel, HTML5, JavaScript, MySql',
+    techStack: 'Laravel, HTML5, JavaScript, MySql, PHP, CSS',
   },
   {
     id: 2,
