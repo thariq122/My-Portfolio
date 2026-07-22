@@ -60,12 +60,3 @@ Menghentikan container
 ```bash
 docker compose down
 ```
-
----
-
-## 🛠️ Built With
-
-- React
-- Vite
-- Tailwind CSS
-- Docker
