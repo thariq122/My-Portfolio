@@ -1,0 +1,13 @@
+services:
+  portfolio:
+    build: .
+    container_name: portfolio-react
+
+    ports:
+      - "5173:5173"
+
+    volumes:
+      - .:/app
+      - /app/node_modules
+
+    command: npm run dev -- --host

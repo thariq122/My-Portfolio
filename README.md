@@ -1,16 +1,71 @@
-# React + Vite
+# 🌐 Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Website portfolio saya yang dibuat menggunakan **React + Vite + Tailwind CSS** untuk menampilkan tentang saya, project dan juga skill.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React
+- Vite
+- Tailwind CSS
+- Docker
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📦 Menjalankan Project
 
-## Expanding the ESLint configuration
+### Opsi 1 — Tanpa Docker
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Install dependency
+
+```bash
+npm install
+```
+
+Jalankan development server
+
+```bash
+npm run dev
+```
+
+Buka browser
+
+```
+http://localhost:5173
+```
+
+---
+
+### Opsi 2 — Menggunakan Docker
+
+Build dan jalankan container
+
+```bash
+docker compose up --build
+```
+
+Atau jika image sudah pernah dibuat
+
+```bash
+docker compose up
+```
+
+Buka browser
+
+```
+http://localhost:5173
+```
+
+Menghentikan container
+
+```bash
+docker compose down
+```
+
+---
+
+## 🛠️ Built With
+
+- React
+- Vite
+- Tailwind CSS
+- Docker
