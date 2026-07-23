@@ -4,6 +4,8 @@ import phpIcon from '../assets/icons/Php.png'
 import photoshopIcon from '../assets/icons/Adobe Photoshop.png'
 import figmaIcon from '../assets/icons/Figma.png'
 import javascriptIcon from '../assets/icons/JavaScript.png'
+import dockerIcon from '../assets/icons/Docker.png'
+import CssIcon from '../assets/icons/CSS.png'
 
 const skills = [
   {
@@ -35,6 +37,16 @@ const skills = [
     id: 6,
     name: 'JavaScript',
     icon: javascriptIcon,
+  },
+  {
+    id: 7,
+    name: 'Docker',
+    icon: dockerIcon,
+  },
+  {
+    id: 8,
+    name: 'CSS',
+    icon: CssIcon,
   },
 ]
 
