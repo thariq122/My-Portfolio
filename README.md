@@ -2,7 +2,7 @@
 
 Website portfolio saya yang dibuat menggunakan **React + Vite + Tailwind CSS** untuk menampilkan tentang saya, project dan juga skill.
 
-## 🚀 Tech Stack
+## Tech Stack
 
 - React
 - Vite
@@ -11,7 +11,7 @@ Website portfolio saya yang dibuat menggunakan **React + Vite + Tailwind CSS** u
 
 ---
 
-## 📦 Menjalankan Project
+## Menjalankan Project
 
 ### Opsi 1 — Tanpa Docker
 
