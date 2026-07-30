@@ -1,4 +1,4 @@
-# 🌐 Personal Portfolio
+# Personal Portfolio
 
 Website portfolio saya yang dibuat menggunakan **React + Vite + Tailwind CSS** untuk menampilkan tentang saya, project dan juga skill.
 
