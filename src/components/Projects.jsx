@@ -28,7 +28,6 @@ function Projects() {
         })
       })
 
-      // ensure triggers refresh so items already in view animate immediately
       gsap.delayedCall(0, () => ScrollTrigger.refresh())
     })
 
@@ -45,7 +44,6 @@ function Projects() {
       aria-label="Projects"
     >
       <div className="max-w-content mx-auto">
-        {/* Heading + subtitle via SectionHeading */}
         <SectionHeading
           title="Projects"
           subtitle="This is a project that I have worked on"
@@ -61,6 +59,8 @@ function Projects() {
                 imageAlt={project.imageAlt}
                 description={project.description}
                 techStack={project.techStack}
+                demo={project.demo}
+                repo={project.repo}
               />
             </div>
           ))}
