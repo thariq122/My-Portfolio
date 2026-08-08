@@ -1,6 +1,8 @@
 import ExperienceCard from './ExperienceCard'
 import SectionHeading from './SectionHeading'
-import { motion } from 'framer-motion'
+import { useEffect } from 'react'
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import experience from '../data/experience'
 
 const entryVariant = {
@@ -36,6 +38,36 @@ function DateLabel({ period, align }) {
 }
 
 function Experience() {
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
+    gsap.registerPlugin(ScrollTrigger)
+    const ctx = gsap.context(() => {
+      const items = gsap.utils.toArray('.experience-item')
+      items.forEach((el) => {
+        gsap.from(el, {
+          scrollTrigger: {
+            trigger: el,
+            start: 'top 85%',
+            toggleActions: 'play none none none',
+          },
+          y: 30,
+          opacity: 0,
+          duration: 0.6,
+          ease: 'power3.out',
+        })
+      })
+
+      gsap.delayedCall(0, () => ScrollTrigger.refresh())
+    })
+
+    return () => {
+      ctx.revert()
+      ScrollTrigger.getAll().forEach(t => t.kill())
+    }
+  }, [])
+
   return (
     <section
       id="experience"
@@ -60,13 +92,7 @@ function Experience() {
 
           <ul className="space-y-12 md:space-y-16" role="list">
             {experience.map((entry) => (
-              <motion.li
-                key={entry.id}
-                variants={entryVariant}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-              >
+              <li key={entry.id} className="experience-item">
                 {/* Mobile layout */}
                 <div className="flex items-start gap-4 md:hidden">
                   <MobileNode />
@@ -109,8 +135,8 @@ function Experience() {
                       </div>
                     </>
                   )}
-                </div>
-              </motion.li>
+                    </div>
+                  </li>
             ))}
           </ul>
         </div>
