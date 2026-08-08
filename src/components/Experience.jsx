@@ -45,17 +45,27 @@ function Experience() {
     gsap.registerPlugin(ScrollTrigger)
     const ctx = gsap.context(() => {
       const items = gsap.utils.toArray('.experience-item')
-      items.forEach((el) => {
-        gsap.from(el, {
-          scrollTrigger: {
-            trigger: el,
-            start: 'top 85%',
-            toggleActions: 'play none none none',
-          },
-          y: 30,
-          opacity: 0,
-          duration: 0.6,
-          ease: 'power3.out',
+      items.forEach((el, i) => {
+        const isDesktop = window.matchMedia('(min-width: 768px)').matches
+        const side = el.classList.contains('from-left') ? -1 : 1
+        const fromVars = isDesktop
+          ? { x: 90 * side, autoAlpha: 0, skewX: 3 * -side }
+          : { y: 20, autoAlpha: 0 }
+
+        // create a timeline per element so we can restart it on enter/back
+        const tl = gsap.timeline({ paused: true })
+        tl.from(el, { ...fromVars, duration: 1.1, ease: 'power3.out', delay: i * 0.06 })
+
+        // if already in view on load, play immediately
+        const rect = el.getBoundingClientRect()
+        const inViewOnLoad = rect.top < window.innerHeight && rect.bottom > 0
+        if (inViewOnLoad) tl.restart()
+
+        ScrollTrigger.create({
+          trigger: el,
+          start: 'top 85%',
+          onEnter: () => tl.restart(),
+          onEnterBack: () => tl.restart(),
         })
       })
 
@@ -92,7 +102,7 @@ function Experience() {
 
           <ul className="space-y-12 md:space-y-16" role="list">
             {experience.map((entry) => (
-              <li key={entry.id} className="experience-item">
+              <li key={entry.id} className={`experience-item ${entry.side === 'left' ? 'from-left' : 'from-right'}`}>
                 {/* Mobile layout */}
                 <div className="flex items-start gap-4 md:hidden">
                   <MobileNode />
