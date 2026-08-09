@@ -61,11 +61,16 @@ function Experience() {
         const inViewOnLoad = rect.top < window.innerHeight && rect.bottom > 0
         if (inViewOnLoad) tl.restart()
 
+        let hasPlayed = inViewOnLoad
         ScrollTrigger.create({
           trigger: el,
           start: 'top 85%',
-          onEnter: () => tl.restart(),
-          onEnterBack: () => tl.restart(),
+          onEnter: () => {
+            if (!hasPlayed) {
+              tl.restart()
+              hasPlayed = true
+            }
+          },
         })
       })
 
