@@ -13,18 +13,19 @@ function Projects() {
     gsap.registerPlugin(ScrollTrigger)
     const ctx = gsap.context(() => {
       const cards = gsap.utils.toArray('.project-card')
+
       cards.forEach((card, i) => {
         gsap.from(card, {
           scrollTrigger: {
             trigger: card,
-            start: 'top 85%',
+            start: 'top 88%',
             toggleActions: 'play none none none',
           },
-          y: 30,
+          y: 100,
           opacity: 0,
-          duration: 0.6,
+          duration: 1.4,
           ease: 'power3.out',
-          delay: i * 0.03,
+          delay: i * 0.12,
         })
       })
 

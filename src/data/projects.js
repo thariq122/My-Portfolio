@@ -1,5 +1,7 @@
 import allCleanImg from '../assets/images/All Clean Laundry Website.png'
 import sistemDeteksiImg from '../assets/images/Sistem Deteksi.png'
+import PRDgeneratorImg from '../assets/images/PRDgenerator.png'
+import KRlImg from '../assets/images/KRL.png'
 
 const projects = [
   {
@@ -26,6 +28,30 @@ const projects = [
     demo: '#',
     repo: 'https://github.com/thariq122/SistemDeteksi-SC',
   },
+  {
+    id: 3,
+    title: 'PRD Generator',
+    category: 'Dump Project',
+    image: PRDgeneratorImg,
+    imageAlt: 'PRD Generator screenshot',
+    description:
+      'A web application designed to generate Product Requirement Documents (PRDs) for software development projects, streamlining the documentation process and ensuring clarity in project scope and objectives.',
+    techStack: 'Next.Js, React, Tailwind CSS, JavaScript',
+    demo: '#',
+    repo: 'https://prd-studio-generator.vercel.app/',
+  },
+  {
+    id: 4,
+    title: 'KRL Jabodetabek Railway',
+    category: 'Dump Project',
+    image: KRlImg,
+    imageAlt: 'KRL screenshot',
+    description:
+      'Aplikasi web interaktif untuk memvisualisasikan jaringan KRL Jabodetabek, dengan fokus utama pada Lin Bogor (Depok ↔ Jakarta). Proyek ini menampilkan peta dasar gelap, polyline jalur, marker stasiun, dan informasi singkat setiap stasiun.',
+    techStack: 'JavaScript, HTML5, CSS',
+    demo: '#',
+    repo: 'https://krl-jabodetabek.netlify.app/',
+  }
 ]
 
 export default projects
