@@ -4,10 +4,11 @@ import GlowEffect from './GlowEffect'
 import social from '../data/social'
 
 const FOOTER_NAV = [
-  { label: 'About Me.',   href: '#home'       },
-  { label: 'Experience.', href: '#experience' },
-  { label: 'Projects.',   href: '#projects'   },
-  { label: 'Contact.',    href: '#contact'    },
+  { label: 'About Me.',     href: '#home'         },
+  { label: 'Experience.',   href: '#experience'  },
+  { label: 'Projects.',     href: '#projects'    },
+  { label: 'Achievements.', href: '#achievements' },
+  { label: 'Contact.',      href: '#contact'     },
 ]
 
 const CONTACT  = { email: 'mthariq2024@gmail.com', phone: '+62 812 9987 2365' }

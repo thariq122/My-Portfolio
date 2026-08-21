@@ -3,6 +3,7 @@ import Hero from './components/Hero'
 import TechStack from './components/TechStack'
 import Experience from './components/Experience'
 import Projects from './components/Projects'
+import Achievements from './components/Achievements'
 import Footer from './components/Footer'
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
         <TechStack />
         <Experience />
         <Projects />
+        <Achievements />
       </main>
       <Footer />
     </>

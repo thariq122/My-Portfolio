@@ -4,12 +4,13 @@ import { HiMenu, HiX } from 'react-icons/hi'
 import useScrollActive from '../hooks/useScrollActive'
 
 const NAV_LINKS = [
-  { label: 'Home',       href: '#home'       },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Projects',   href: '#projects'   },
+  { label: 'Home',        href: '#home'        },
+  { label: 'Experience',  href: '#experience'  },
+  { label: 'Projects',    href: '#projects'    },
+  { label: 'Achievements', href: '#achievements' },
 ]
 
-const SECTION_IDS = ['home', 'experience', 'projects', 'contact']
+const SECTION_IDS = ['home', 'experience', 'projects', 'achievements', 'contact']
 
 const EASING = [0.16, 1, 0.3, 1]
 
