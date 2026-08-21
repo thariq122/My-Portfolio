@@ -1,3 +1,8 @@
+import pythonImg from '../assets/images/PythonProgramming-Certif.png'
+import networkingImg from '../assets/images/Networking-Certif.png'
+import cloudImg from '../assets/images/Cloud-Certif.png'
+import seminarImg from '../assets/images/Seminar-Certif1.png'
+
 const achievements = [
   {
     id: 1,
@@ -5,7 +10,7 @@ const achievements = [
     issuer: 'Red Hat',
     date: 'March 2024',
     description: 'Validates foundational knowledge of Python programming concepts, syntax, and application development.',
-    image: 'src/assets/images/PythonProgramming-Certif.png'
+    image: pythonImg
   },
   {
     id: 2,
@@ -13,7 +18,7 @@ const achievements = [
     issuer: 'Cisco Networking Academy',
     date: 'January 2024',
     description: 'Completed 7-course program covering user research, wireframing, prototyping, usability testing, and design systems.',
-    image: 'src/assets/images/Networking-Certif.png'
+    image: networkingImg
   },
   {
     id: 3,
@@ -21,7 +26,7 @@ const achievements = [
     issuer: 'Dicoding',
     date: 'November 2023',
     description: 'Mastered HTML, CSS, JavaScript, React, Bootstrap, Git, and built responsive web applications.',
-    image: 'src/assets/images/Cloud-Certif.png'
+    image: cloudImg
   },
   {
     id: 4,
@@ -29,7 +34,7 @@ const achievements = [
     issuer: 'Akselerate',
     date: 'August 2023',
     description: 'Demonstrated proficiency in HTML5, CSS3, Flexbox, CSS Grid, and responsive design principles.',
-    image: 'src/assets/images/Seminar-Certif1.png'
+    image: seminarImg
   },
 ]
 
